@@ -56,6 +56,13 @@
             bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
             label = "BRACKET";
         };
+
+        screenshot: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "SCREENSHOT";
+        };
     };
 
     behaviors {
@@ -83,12 +90,12 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        FUNCTION {
+        Number_Function {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
+&kp EXCLAMATION  &kp QUESTION  &kp DOUBLE_QUOTES  &kp APOSTROPHE  &trans                      &kp F9  &kp F10  &kp F11  &kp F12  &kp F5
+&trans           &trans        &trans             &trans          &trans  &trans      &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp HOME
+&trans           &trans        &trans             &trans          &trans  &trans      &trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp END
+&trans           &trans        &trans             &trans          &trans  &trans      &trans  &trans                             &trans
             >;
         };
 
